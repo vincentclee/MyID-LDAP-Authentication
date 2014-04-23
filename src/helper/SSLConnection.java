@@ -106,7 +106,6 @@ public class SSLConnection {
 		String major = "";
 		try{
 			LDAPSearchResults searchResults = this.conn.search(searchBase, searchScope, searchFilter,null,false);
-			System.out.println(searchResults.toString());
          	while ( searchResults.hasMore()) {
          		//prcocesses an entry of the search result
                 LDAPEntry nextEntry = null;
