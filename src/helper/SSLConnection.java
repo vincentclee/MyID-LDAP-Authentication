@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 
 import com.novell.ldap.util.Base64;
 
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Iterator;
 
@@ -134,8 +135,11 @@ public class SSLConnection {
 				//Get all Attributes
 				if (DEBUG) {
 					Iterator<?> iterator = attributeSet.iterator();
-					while(iterator.hasNext())
-						System.out.println(iterator.next());
+					while(iterator.hasNext()) {
+						LDAPAttribute attribute = (LDAPAttribute)iterator.next();
+						System.out.print(attribute.getName());
+						System.out.println(Arrays.toString(attribute.getStringValueArray()));
+					}
 				}
 				
 				

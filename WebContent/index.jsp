@@ -8,8 +8,8 @@
 <body>
 
 <form action="Login" method="post">
-	<p>UGA MyID<input type="text" name="myid"></p>
-	<p>Password<input type="password" name="password"></p>
+	<p>UGA MyID<input type="text" name="myid" value=""></p>
+	<p>Password<input type="password" name="password" value=""></p>
 	<p><input type="submit" value="submit"></p> 
 </form>
 
